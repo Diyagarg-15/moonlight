@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>moonlight</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hillcon">
+        <div class="hill1"></div>
+        <div class="hill2"></div> 
+        <div class="hill3"></div>
+      </div> 
+      <button class="but" onclick="day()"></button>
+      <div id="moon"> 
+        </div>
+      <div id="star">
+      </div>
+      <div id="shoots">
+      </div>
+    </div>
+    <script>
+      var k1=document.getElementById("moon");
+      for(let i=0;i<=8;i++){
+      var div1=document.createElement("div");
+      div1.setAttribute("class","circle");
+      k1.appendChild(div1);
+          }
+      var k2=document.getElementById("star");
+      for(let i=0;i<=300;i++){
+        var div2=document.createElement("div");
+        div2.setAttribute("class","stars");
+        k2.appendChild(div2);
+          }
+      var k3=document.getElementById("shoots");
+      for(let i=0;i<=8;i++){
+        var div3=document.createElement("div");
+        div3.setAttribute("class","shoot");
+        k3.appendChild(div3);
+          }
+      function day(){
+        var theme = document.getElementsByTagName('link')[0];
+        if (theme.getAttribute('href') == 'style.css') {
+            theme.setAttribute('href', 'style2.css');
+        } else {
+            theme.setAttribute('href', 'style.css');
+        }
+      }
+
+
+  </script>
+  </body>
+</html>

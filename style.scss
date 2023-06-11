@@ -1,0 +1,183 @@
+body{
+    margin :0;
+    padding: 0px;
+    background-color: rgb(7, 6, 49);
+    
+}
+.container{
+    width: 100%;
+    height: 900px;
+    background-color: rgb(7, 6, 49);
+    position: relative;
+    overflow:hidden;
+
+    
+}
+#moon{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+
+}
+
+@for $i from 1 through 8{
+    
+    .circle:nth-child(#{$i}){
+        @if( $i == 1){
+            //border: 2px solid rgba(224, 223, 223, 0.91);
+            background-color: rgba(224, 223, 223, 0.91);
+            opacity: 1;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position:absolute;
+            //box-shadow: 0px 0px 7px 2px rgba(224, 223, 223, 0.823);;
+        
+            margin-top: calc(250px - 75px);
+            margin-left: calc(50% - 75px);
+            z-index:10;
+        }
+        @else{
+
+        //border: 0px solid rgb(187, 36, 36) ;
+        border-radius: 50%;
+        width: $i*100px;
+        height: $i*100px;
+        position:absolute;
+        
+        margin-top: calc(250px - $i*50px);
+        margin-left: calc(50% - $i*50px);
+        //bottom: $i*25px;
+        z-index: 10;
+        
+        
+        opacity: 1/($i*4);
+        box-shadow: inset 0px 0px 30px 20px rgba(240, 236, 236, 1);
+        }
+        
+
+    }
+    
+}
+@for $z from 1 through 8{
+    .shoot:nth-child(#{$z}){
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        top: -10px;
+        left:random(1500)+px;
+        background: rgb(255, 252, 252);
+        opacity: 1;
+        position: absolute;
+
+        z-index: 30;
+        transform: translateY(-100px);
+        animation-name: shooting-#{$z};
+        animation-duration: random(20)+s;
+        animation-iteration-count: infinite;
+        animation-delay: $z*1s;
+        animation-timing-function: ease-in;
+
+    }
+
+    @keyframes shooting-#{$z} {
+        0%{
+            transform: rotate(162.5deg) translateX(0);
+            opacity:1;
+        }
+        30%,100%{
+            transform: rotate(162.5deg) translateX(1500px);
+            width: 0px;
+            height: 0px;
+            opacity:0.4;
+
+        }
+    }
+}
+#star{
+    position: relative;
+    width: 100%;
+    height:700px;
+    overflow: hidden;
+    margin: 0px auto;
+}
+@for $n from 1 through 300{
+    .stars:nth-child(#{$n}){
+        $d: random(2);
+        width: $d + px;
+        height: $d + px;
+        border-radius: 50%;
+        background: rgb(255, 252, 252);
+
+        margin-top: random(900) + px;
+        margin-left: random(1500) + px;
+
+        z-index: 5;
+        opacity: 1;
+        position :absolute;
+        animation-name: twinkle;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: $n*0.01s;
+
+    }
+}
+@keyframes twinkle {
+    from{
+        opacity:1;
+
+    }
+    to{
+        //transform: scale(1.2);
+        opacity:0.5;
+    }
+    
+}
+
+.hillcon{
+    position:absolute;
+    width: 100%;
+    height:300px;
+    z-index: 50;
+    margin-top: 400px;
+    margin-left: calc(50% - 400px);
+    
+}
+.hill1{
+    background: linear-gradient(151deg, rgb(9, 6, 61) 0%, rgba(28,3,43,1) 97%);
+    position: absolute;
+    width: 900px;
+    height: 1000px;
+    rotate:45deg;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-top:60px;
+    margin-left:-100px;
+}
+.hill2{
+    background: linear-gradient(151deg, rgb(7, 5, 61) 0%, rgba(28,3,43,1) 97%);
+    position: absolute;
+    width: 850px;
+    height: 1000px;
+    rotate:45deg;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-top:80px;
+    margin-left:10px;
+    
+}
+.hill3{
+    background: linear-gradient(151deg, rgb(7, 6, 49) 0%, rgba(28,3,43,1) 97%);
+    position: absolute;
+    width: 800px;
+    height: 1000px;
+    rotate:45deg;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: -200px;
+
+}

@@ -1,0 +1,462 @@
+body {
+  margin: 0;
+  padding: 0px;
+  background-color: rgb(7, 6, 49);
+}
+
+.container {
+  width: 100%;
+  height: 900px;
+  background: linear-gradient(180deg, rgb(226, 152, 142) 0%, rgb(185, 36, 14) 46%, rgb(68, 13, 1) 78%);
+  position: relative;
+  overflow: hidden;
+  animation: sky-change 10s linear;
+}
+
+@keyframes sky-change {
+  0% {
+    background: rgb(7, 6, 49);
+  }
+  100% {
+    background: linear-gradient(180deg, rgb(226, 152, 142) 0%, rgb(185, 36, 14) 46%, rgb(68, 13, 1) 78%);
+  }
+}
+#moon {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+}
+
+.circle:nth-child(1) {
+  background-color: rgba(224, 223, 223, 0.91);
+  opacity: 1;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  margin-top: 175px;
+  margin-left: calc(50% - 75px);
+  z-index: 10;
+  animation-name: change;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes collapse-1 {
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: em;
+  }
+}
+@keyframes change {
+  0% {
+    transform: translateY(0em);
+  }
+  49% {
+    transform: translateY(-400em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(250em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.circle:nth-child(2) {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  margin-top: 150px;
+  margin-left: calc(50% - 100px);
+  z-index: 10;
+  opacity: 0.125;
+  box-shadow: inset 0px 0px 30px 20px rgb(240, 236, 236);
+  animation-name: collapse-2;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+}
+@keyframes collapse-2 {
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: em;
+  }
+}
+@keyframes change {
+  0% {
+    transform: translateY(0em);
+  }
+  49% {
+    transform: translateY(-400em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(250em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.circle:nth-child(3) {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: calc(50% - 150px);
+  z-index: 10;
+  opacity: 0.0833333333;
+  box-shadow: inset 0px 0px 30px 20px rgb(240, 236, 236);
+  animation-name: collapse-3;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+}
+@keyframes collapse-3 {
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: em;
+  }
+}
+@keyframes change {
+  0% {
+    transform: translateY(0em);
+  }
+  49% {
+    transform: translateY(-400em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(250em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.circle:nth-child(4) {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: calc(50% - 200px);
+  z-index: 10;
+  opacity: 0.0625;
+  box-shadow: inset 0px 0px 30px 20px rgb(240, 236, 236);
+  animation-name: collapse-4;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+}
+@keyframes collapse-4 {
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: em;
+  }
+}
+@keyframes change {
+  0% {
+    transform: translateY(0em);
+  }
+  49% {
+    transform: translateY(-400em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(250em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.circle:nth-child(5) {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: calc(50% - 250px);
+  z-index: 10;
+  opacity: 0.05;
+  box-shadow: inset 0px 0px 30px 20px rgb(240, 236, 236);
+  animation-name: collapse-5;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+}
+@keyframes collapse-5 {
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: em;
+  }
+}
+@keyframes change {
+  0% {
+    transform: translateY(0em);
+  }
+  49% {
+    transform: translateY(-400em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(250em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.circle:nth-child(6) {
+  border-radius: 50%;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: calc(50% - 300px);
+  z-index: 10;
+  opacity: 0.0416666667;
+  box-shadow: inset 0px 0px 30px 20px rgb(240, 236, 236);
+  animation-name: collapse-6;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+}
+@keyframes collapse-6 {
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: em;
+  }
+}
+@keyframes change {
+  0% {
+    transform: translateY(0em);
+  }
+  49% {
+    transform: translateY(-400em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(250em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.circle:nth-child(7) {
+  border-radius: 50%;
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  margin-top: -100px;
+  margin-left: calc(50% - 350px);
+  z-index: 10;
+  opacity: 0.0357142857;
+  box-shadow: inset 0px 0px 30px 20px rgb(240, 236, 236);
+  animation-name: collapse-7;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+}
+@keyframes collapse-7 {
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: em;
+  }
+}
+@keyframes change {
+  0% {
+    transform: translateY(0em);
+  }
+  49% {
+    transform: translateY(-400em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(250em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.circle:nth-child(8) {
+  border-radius: 50%;
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  margin-top: -150px;
+  margin-left: calc(50% - 400px);
+  z-index: 10;
+  opacity: 0.03125;
+  box-shadow: inset 0px 0px 30px 20px rgb(240, 236, 236);
+  animation-name: collapse-8;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+}
+@keyframes collapse-8 {
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: em;
+  }
+}
+@keyframes change {
+  0% {
+    transform: translateY(0em);
+  }
+  49% {
+    transform: translateY(-400em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(250em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0em);
+    opacity: 1;
+  }
+}
+
+.hillcon {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: 50;
+  margin-top: 400px;
+  margin-left: calc(50% - 400px);
+}
+
+.hill1 {
+  background: linear-gradient(150deg, rgb(203, 34, 12) 0%, rgb(68, 13, 1) 71%);
+  position: absolute;
+  width: 900px;
+  height: 1000px;
+  rotate: 45deg;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: -100px;
+  animation-name: hill1-change;
+  animation-duration: 10s;
+}
+
+@keyframes hill1-change {
+  0% {
+    background: linear-gradient(151deg, rgb(9, 6, 61) 0%, rgb(28, 3, 43) 97%);
+  }
+  50% {
+    background: linear-gradient(151deg, rgb(9, 6, 61) 0%, rgb(28, 3, 43) 97%);
+  }
+  100% {
+    background: linear-gradient(150deg, rgb(203, 34, 12) 0%, rgb(68, 13, 1) 71%);
+  }
+}
+.hill2 {
+  background: linear-gradient(150deg, rgb(203, 34, 12) 0%, rgb(68, 13, 1) 53%);
+  position: absolute;
+  width: 850px;
+  height: 1000px;
+  rotate: 45deg;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin-top: 80px;
+  margin-left: 10px;
+  animation-name: hill2-change;
+  animation-duration: 10s;
+}
+
+@keyframes hill2-change {
+  0% {
+    background: linear-gradient(151deg, rgb(7, 5, 61) 0%, rgb(28, 3, 43) 97%);
+  }
+  50% {
+    background: linear-gradient(151deg, rgb(7, 5, 61) 0%, rgb(28, 3, 43) 97%);
+  }
+  100% {
+    background: linear-gradient(150deg, rgb(203, 34, 12) 0%, rgb(68, 13, 1) 53%);
+  }
+}
+.hill3 {
+  background: linear-gradient(150deg, rgb(203, 34, 12) 0%, rgb(63, 12, 1) 45%);
+  position: absolute;
+  width: 800px;
+  height: 1000px;
+  rotate: 45deg;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin-top: 80px;
+  margin-left: -200px;
+  animation-name: hill2-change;
+  animation-duration: 10s;
+}
+
+@keyframes hill-change {
+  0% {
+    background: linear-gradient(151deg, rgb(7, 6, 49) 0%, rgb(28, 3, 43) 97%);
+  }
+  50% {
+    background: linear-gradient(151deg, rgb(7, 6, 49) 0%, rgb(28, 3, 43) 97%);
+  }
+  100% {
+    background: linear-gradient(150deg, rgb(203, 34, 12) 0%, rgb(63, 12, 1) 45%);
+  }
+}/*# sourceMappingURL=style2.css.map */

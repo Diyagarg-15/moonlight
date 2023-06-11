@@ -1,0 +1,202 @@
+body{
+    margin :0;
+    padding: 0px;
+    background-color: rgb(7, 6, 49);
+    
+}
+.container{
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(180deg, rgba(226,152,142,1) 0%, rgba(185,36,14,1) 46%, rgba(68,13,1,1) 78%);
+    position: relative;
+    overflow:hidden;
+    animation: sky-change 10s linear;
+}
+@keyframes sky-change{
+    0%{
+        background: rgb(7, 6, 49);
+    }
+    100%{
+        background: linear-gradient(180deg, rgba(226,152,142,1) 0%, rgba(185,36,14,1) 46%, rgba(68,13,1,1) 78%);
+    }
+}
+#moon{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+
+}
+@for $i from 1 through 8{
+    
+    .circle:nth-child(#{$i}){
+        @if( $i == 1){
+            //border: 2px solid rgba(224, 223, 223, 0.91);
+            background-color: rgba(224, 223, 223, 0.91);
+            opacity: 1;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            position:absolute;
+            //box-shadow: 0px 0px 7px 2px rgba(224, 223, 223, 0.823);;
+        
+            margin-top: calc(250px - 75px);
+            margin-left: calc(50% - 75px);
+            z-index:10;
+
+            animation-name: change;
+            animation-iteration-count: 1;
+            animation-duration: 5s;
+            animation-delay: 5s;
+            animation-timing-function: ease-in-out;
+        }
+        @else{
+
+        //border: 0px solid rgb(187, 36, 36) ;
+        border-radius: 50%;
+        width: $i*100px;
+        height: $i*100px;
+        position:absolute;
+        
+        margin-top: calc(250px - $i*50px);
+        margin-left: calc(50% - $i*50px);
+        //bottom: $i*25px;
+        z-index: 10;
+        
+        
+        opacity: 1/($i*4);
+        box-shadow: inset 0px 0px 30px 20px rgba(240, 236, 236, 1);
+        animation-name: collapse-#{$i};
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        }
+        @keyframes collapse-#{$i} {
+            0%{
+               
+            }
+            30%{
+                
+                opacity: 0;
+                
+            }  
+            60%{
+                opacity: 0;
+            }
+            100%{
+                opacity: em;
+            }
+        }
+        @keyframes change {
+            0%{
+                transform: translateY(0em);
+            }
+            49%{
+                transform: translateY(-400em);
+                opacity: 0;
+            }
+            50%{
+                transform: translateY(250em);
+                opacity:0;
+            }
+            100%{
+                transform: translateY(0em);
+                opacity:1;
+            }
+            
+        }
+    }
+
+    
+}
+
+
+.hillcon{
+    position:absolute;
+    width: 100%;
+    height:300px;
+    z-index: 50;
+    margin-top: 400px;
+    margin-left: calc(50% - 400px);
+    
+}
+.hill1{
+    background: linear-gradient(150deg, rgba(203,34,12,1) 0%, rgba(68,13,1,1) 71%);
+    position: absolute;
+    width: 900px;
+    height: 1000px;
+    rotate:45deg;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-top:60px;
+    margin-left:-100px;
+
+    animation-name: hill1-change;
+    animation-duration: 10s;
+}
+@keyframes hill1-change{
+    0%{
+        background: linear-gradient(151deg, rgb(9, 6, 61) 0%, rgba(28,3,43,1) 97%);
+    }
+    50%{
+        background: linear-gradient(151deg, rgb(9, 6, 61) 0%, rgba(28,3,43,1) 97%);
+    }
+    100%{
+        background: linear-gradient(150deg, rgba(203,34,12,1) 0%, rgba(68,13,1,1) 71%);
+    }
+}
+
+.hill2{
+    background: linear-gradient(150deg, rgba(203,34,12,1) 0%, rgba(68,13,1,1) 53%);
+    position: absolute;
+    width: 850px;
+    height: 1000px;
+    rotate:45deg;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-top:80px;
+    margin-left:10px;
+
+    animation-name: hill2-change;
+    
+    animation-duration:10s;
+}
+@keyframes hill2-change{
+    0%{
+        background: linear-gradient(151deg, rgb(7, 5, 61) 0%, rgba(28,3,43,1) 97%);
+    }
+    50%{
+        background: linear-gradient(151deg, rgb(7, 5, 61) 0%, rgba(28,3,43,1) 97%);
+    }
+    100%{
+        background: linear-gradient(150deg, rgba(203,34,12,1) 0%, rgba(68,13,1,1) 53%);
+    }
+}
+    
+
+.hill3{
+    background: linear-gradient(150deg, rgba(203,34,12,1) 0%, rgba(63,12,1,1) 45%);
+    position: absolute;
+    width: 800px;
+    height: 1000px;
+    rotate:45deg;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: -200px;
+
+    animation-name: hill2-change;
+    animation-duration:10s;
+}
+@keyframes hill-change{
+    0%{
+        background: linear-gradient(151deg, rgb(7, 6, 49) 0%, rgba(28,3,43,1) 97%);
+    }
+    50%{
+        background: linear-gradient(151deg, rgb(7, 6, 49) 0%, rgba(28,3,43,1) 97%);
+    }
+    100%{
+        background: linear-gradient(150deg, rgba(203,34,12,1) 0%, rgba(63,12,1,1) 45%);
+    }
+}
